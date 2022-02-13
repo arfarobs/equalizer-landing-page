@@ -6,15 +6,12 @@
     <meta name="description" content="Frontend mentor, equalizer landing page, solution, challenge"/> 
     <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
     <link rel="stylesheet" href="./CSS/style.css" type="text/css"/>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;700&display=swap" rel="stylesheet">
     <title>Equalizer landing page</title>
   </head>
 
   <body>
-    <header class="page-header">
-      <img class="header-img" src="./assets/bg-pattern-1.svg" alt=""/>
+    <header class="page-header" role="banner">
+      <img class="header-img" aria-hidden="true" src="./assets/bg-pattern-1.svg" alt=""/>
       <img class="header-logo" src="./assets/logo.svg" alt="equalizer logo"/>
       <div class="header-content">
         <h1>We make your music sound extraordinary.</h1>
@@ -26,10 +23,10 @@
       </div>
     </header>
 
-    <main>
+    <main role="main">
       <img class="phone" src="./assets/illustration-app.png" alt="A phone diplaying the APP's interface"/>
       <div class="pattern-container">
-        <img class="pattern" src="./assets/bg-pattern-2.svg" alt=""/>
+        <img class="pattern" aria-hidden="true" src="./assets/bg-pattern-2.svg" alt=""/>
       </div>
       <article>
         <header>
@@ -39,24 +36,25 @@
             your listening experience to a whole new level and access all our incredible features!
           </p>
         </header>
-      <p class="price">$4 <span class="month">/ month</span></p>
-      <button class="apple-btn"><img src="./assets/icon-apple.svg" alt=""/>iOS Download</button>
-      <button class="android-btn"><img src="./assets/icon-android.svg" alt=""/>Android Download</button>
+        <p class="price">$4 <span class="month">/ month</span></p>
+        <button class="apple-btn"><img aria-hidden="true" src="./assets/icon-apple.svg" alt=""/>iOS Download</button>
+        <button class="android-btn"><img aria-hidden="true" src="./assets/icon-android.svg" alt=""/>Android Download</button>
       </article>
     </main>
 
-      <footer>
+      <footer role="contentinfo">
         <img class="footer-logo" src="./assets/logo.svg" alt="Equalizer logo"/>
         <div class="footer-content-container">
           <p>
             All rights reserved © Equalizer 2021<br/>
             Have any problems? Contact us via social media or email us at <span>equalizer@example.com</span>
           </p>
-          <div class="footer-icon-container">
-            <a tabindex="0"><img src="./assets/icon-facebook.svg" alt="Facebook icon"/></a>
-            <a tabindex="0"><img src="./assets/icon-instagram.svg" alt="Instagram icon"/></a>
-            <a tabindex="0"><img src="./assets/icon-twitter.svg" alt="Twitter icon"/></a>
+          <div class="footer-icon-container" role="navigation">
+            <a aria-label="icon-facebook" tabindex="0"><img src="./assets/icon-facebook.svg" alt="Facebook icon"/></a>
+            <a tabindex="0" aria-label="icon-instagram"><img src="./assets/icon-instagram.svg" alt="Instagram icon"/></a>
+            <a tabindex="0" aria-label="icon-twitter"><img src="./assets/icon-twitter.svg" alt="Twitter icon"/></a>
           </div>
         </div>
+      </footer>
   </body>
 </html>
