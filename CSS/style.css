@@ -145,6 +145,8 @@ button {
     align-items: center;
     justify-content: center;
     border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out ;
 }
 
 button img {
@@ -157,9 +159,17 @@ button img {
     margin-bottom: 16px;
 }
 
+.apple-btn:hover, .apple-btn:focus-visible {
+    background-color: #66E2DC;
+}
+
 .android-btn {
     background-color: #FCFAF9;
     color: #191826;
+}
+
+.android-btn:hover, .android-btn:focus-visible {
+    background-color: #FFB964;
 }
 
 /*Footer*/
@@ -192,6 +202,12 @@ footer {
     display: flex;
     width: 100px;
     justify-content: space-between;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.footer-icon-container a:hover, .footer-icon-container a:focus-visible {
+    filter: invert(75%) sepia(78%) saturate(4161%) hue-rotate(325deg) brightness(99%) contrast(98%);
 }
 
 /*Media Queries*/
