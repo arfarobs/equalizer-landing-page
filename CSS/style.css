@@ -19,19 +19,18 @@ body {
 h1 {
     font-family: 'IBM Plex Sans', sans-serif;
     font-weight: 700;
-    font-size: min(max(40px, calc(2.5rem + ((1vw - 3.75px) * 4.507))), 88px);
-    letter-spacing: min(max(-0.4545px, calc(0.02840625rem + ((1vw - 3.75px) * 0.0512))), -1px);
-    margin-bottom: min(max(20px, calc(1.25rem + ((1vw - 3.75px) * 1.8779))), 40px);
-    min-height: 0vw;
+    font-size: 40px;
+    letter-spacing: -0.45px;
+    margin-bottom: 20px;
+    line-height: 48px;
 }
 
 h2 {
     font-family: 'IBM Plex Sans', sans-serif;
-    font-size: min(max(32px, calc(2rem + ((1vw - 3.75px) * 0.7512))), 40px);
+    font-size: 32px;
     font-weight: bold;
-    line-height: min(max(40px, calc(2.5rem + ((1vw - 3.75px) * 1.1268))), 52px);
-    color: #FCFAF9;
-    min-height: 0vw;
+    line-height: 40px;
+    color: #FCFAF9
 }
 
 p {
@@ -42,10 +41,7 @@ p {
 /*header*/
 
 .page-header {
-    position: relative;
-    overflow: hidden;
-    margin-bottom: min(max(68px, calc(4.25rem + ((1vw - 3.75px) * 4.0376))), 111px);
-    min-height: 0vw;
+    margin-bottom: 68px;
 }
 
 .header-img {
@@ -53,25 +49,20 @@ p {
     height: 400px;
     top: -32px;
     right: -35.6px;
+    overflow: hidden;
 }
 
 .header-logo {
-    margin-left: 24px;
-    margin-top: min(max(40px, calc(2.5rem + ((1vw - 3.75px) * 5.598))), 62px);
-    height: 32px;
-    min-height: 0vw;
+    margin: 40px 0 0 24px;
 }
 
 .header-content {
-    margin-right: 24px;
-    margin-left: 24px;
-    margin-top: min(max(64px, calc(4rem + ((1vw - 3.75px) * 5.9155))), 127px);
+    margin: 64px 24px 0 24px;
 }
 
 .page-header p {
-    font-size: min(max(16px, calc(1rem + ((1vw - 3.75px) * 0.3756))), 20px);
-    line-height: min(max(26px, calc(1.625rem + ((1vw - 3.75px) * 0.7512))), 34px);
-    min-height: 0vw;
+    font-size: 16px;
+    line-height: 26px;
 }
 
 /*main*/
@@ -81,6 +72,7 @@ main {
     grid-template-columns: 1fr;
     grid-template-rows: 98px 380px 220px 326px;
     justify-items: center;
+    justify-content: center;
 }
 
 /*phone*/
@@ -109,6 +101,7 @@ main {
 /*article*/
 
 article {
+    max-width: 446px;
     background-color: #FA7453;
     padding: 48px 36px;
     border-radius: 12px;
@@ -205,32 +198,44 @@ footer {
 
 /*Media Queries*/
 
-@media only screen and (max-width: 376px) {
+@media only screen and (max-width: 768px) {
     .header-img {
         display: none;
     }
-    h1 {
-        line-height: 48px;
-    }
 }
 
-@media only screen and (min-width: 376px) and (max-width: 769px) {
+@media only screen and (min-width: 768px) and (max-width: 1440px) {
     
     body {
         background-image: url('../assets/bg-main-tablet.png');
         background-position: left -400px top -200px;
     }
 
+    h1 {
+        font-size: 64px;
+        line-height: 64px;
+        letter-spacing: -0.727273px;
+        margin-bottom: 28px;
+    }
+
     /*Header*/
 
-    .header-logo, .header-content {
-        margin-left: min(max(24px, calc(1.5rem + ((1vw - 3.75px) * 3.8168))), 39px);
-        min-height: 0vw;
+    .page-header {
+        margin-bottom: 111px;
+    }
+
+    .header-logo {
+        margin: 62px 0 0 39px;
     }
 
     .header-content {
-        width: min(max(327px, calc(20.4375rem + ((1vw - 3.75px) * 49.1094))), 520px);
-        min-height: 0vw;
+        width: 520px;
+        margin: 95px 0 0 39px;
+    }
+
+    .header-content p {
+        font-size: 18px;
+        line-height: 28px;
     }
 
     /*Main*/
@@ -283,33 +288,49 @@ footer {
     }
 }
 
-@media only screen and (min-width: 769px) {
+@media only screen and (min-width: 1440px) {
     body {
         background-image: url('../assets/bg-main-desktop.png');
         background-position: left -350px top -250px;
     }
 
     h1 {
-        width: min(max(512px, calc(32rem + ((1vw - 7.68px) * 74.8512))), 1015px);
-        min-height: 0vw;
+        font-size: 88px;
+        line-height: 88px;
+        letter-spacing: -1px;
+        margin-bottom: 40px;
+        max-width: 1015px;
+    }
+
+    h2 {
+        font-size: 40px;
+        line-height: 52px;
     }
 
     /*Header*/
 
+    .page-header {
+        margin-bottom: 108px;
+    }
+
     .header-img {
         height: 468px;
-        top: -40px;
+        top: -40;
         right: 0;
     }
 
-    .header-logo, .header-content {
-        margin-left: min(max(39px, calc(2.4375rem + ((1vw - 7.68px) * 18.8988))), 166px);
-        min-height: 0vw;
+    .header-logo {
+        margin: 62px 0 0 166px;
+    }
+
+    .header-content {
+        margin: 127px 0 0 165px;
     }
 
     .page-header p {
-        width: min(max(520px, calc(32.5rem + ((1vw - 7.68px) * 45.3869))), 825px);
-        min-height: 0vw;
+        font-size: 20px;
+        line-height: 34px;
+        max-width: 825px;
     }
 
     /*Main*/
